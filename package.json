@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
+    "@prisma/client": "^6.16.3",
+    "express": "^5.1.0",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "prisma": "^6.16.3"
   }
 }
