@@ -1,0 +1,23 @@
+# Imagem base do Node
+FROM node:20-alpine
+
+# Diretório de trabalho dentro do container
+WORKDIR /app
+
+# Copiar arquivos de dependências
+COPY package*.json ./
+
+# Instalar dependências
+RUN npm install
+
+# Copiar o restante do código
+COPY . .
+
+# Compilar o TypeScript (se estiver usando TS)
+RUN npm run build
+
+# Expõe a porta da aplicação
+EXPOSE 3000
+
+# Comando para iniciar a aplicação
+CMD ["npm", "run", "start"]
