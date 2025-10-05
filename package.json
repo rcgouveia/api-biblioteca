@@ -1,10 +1,35 @@
 {
   "dependencies": {
     "@prisma/client": "^6.16.3",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "zod": "^4.1.11"
   },
   "devDependencies": {
-    "prisma": "^6.16.3"
-  }
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.2",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.16.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "name": "api-biblioteca",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcgouveia/api-biblioteca.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcgouveia/api-biblioteca/issues"
+  },
+  "homepage": "https://github.com/rcgouveia/api-biblioteca#readme"
 }
