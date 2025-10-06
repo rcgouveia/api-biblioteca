@@ -1,5 +1,5 @@
-import { prisma } from '../database/prisma';
-import { Reserva } from "../generated/prisma";
+import { prisma } from '../database/prisma.js';
+import type { Reserva } from "../generated/prisma/index.js";
 
 type ReservaCreateData = Omit<Reserva,'id' | 'createdAt' | 'updatedAt'>
 type ReservaUpdateData = Partial<Omit<ReservaCreateData , 'id' | 'createdAt' | 'updatedAt' | 'clienteCpf' | 'bibliotecarioId'>>

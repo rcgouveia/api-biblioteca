@@ -42,7 +42,7 @@ model Bibliotecario {
   @@map("bibliotecarios")
 }
 
-model Livros {
+model Livro {
   id          Int          @id @default(autoincrement())
   titulo      String
   descricao   String
@@ -66,7 +66,7 @@ model Emprestimo {
   bibliotecarioId Int
   livrosId        Int
 
-  livro         Livros        @relation(fields: [livrosId], references: [id])
+  livro         Livro         @relation(fields: [livrosId], references: [id])
   cliente       Cliente       @relation(fields: [clienteCpf], references: [cpf])
   bibliotecario Bibliotecario @relation(fields: [bibliotecarioId], references: [id])
 
@@ -82,7 +82,7 @@ model Reserva {
   bibliotecarioId Int
   livrosId        Int
 
-  livro         Livros        @relation(fields: [livrosId], references: [id])
+  livro         Livro         @relation(fields: [livrosId], references: [id])
   cliente       Cliente       @relation(fields: [clienteCpf], references: [cpf])
   bibliotecario Bibliotecario @relation(fields: [bibliotecarioId], references: [id])
 

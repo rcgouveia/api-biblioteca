@@ -140,7 +140,7 @@ exports.Prisma.BibliotecarioScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.LivrosScalarFieldEnum = {
+exports.Prisma.LivroScalarFieldEnum = {
   id: 'id',
   titulo: 'titulo',
   descricao: 'descricao',
@@ -185,7 +185,7 @@ exports.Prisma.QueryMode = {
 exports.Prisma.ModelName = {
   Cliente: 'Cliente',
   Bibliotecario: 'Bibliotecario',
-  Livros: 'Livros',
+  Livro: 'Livro',
   Emprestimo: 'Emprestimo',
   Reserva: 'Reserva'
 };

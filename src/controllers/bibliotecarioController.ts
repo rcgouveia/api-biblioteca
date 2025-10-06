@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '../generated/prisma';
 
 const prisma = new PrismaClient();
 
@@ -16,27 +16,21 @@ export const obterBibliotecarioPorId = async (req: Request, res: Response) => {
   res.json(bibliotecario);
 
     if (!id || isNaN(Number(id))) {
-      return res.status(400).json({ error: 'ID inválido.' });
+      return res.status(400).json({ error: 'Funcionario não encontrado.' });
     }
 };
 
 export const criarBibliotecario = async (req: Request, res: Response) => {
-  const { nome, email, senha, cpf } = req.body;
-  const bibliotecario = await prisma.bibliotecario.create({
-    data: { nome, email, senha, cpf },
-  });
-    if (cpf.length !== 11) {
-    return res.status(400).json({ error: 'CPF deve conter exatamente 11 caracteres.' });
-    }
+  try{
+    const { nome, email, senha, cpf } = req.body;
+    const bibliotecario = await prisma.bibliotecario.create({data: { nome, email, senha, cpf },});
+    res.status(201).json(bibliotecario); } 
+  catch (error:any){
+      if (error.code === 'P2002') {
+        return res.status(409).json({ message: `Campo único já existe: ${error.meta.target}` });
+      }
+  }
 
-    if (email.length < 5 || !email.includes('@')) {
-    return res.status(400).json({ error: 'Email inválido.' });
-    }
-    if (senha.length < 8) {
-    return res.status(400).json({ error: 'Senha deve conter no mínimo 8 caracteres.' });
-    }
-
-  res.status(201).json(bibliotecario);
 };
 
 export const atualizarBibliotecario = async (req: Request, res: Response) => {
@@ -48,19 +42,8 @@ export const atualizarBibliotecario = async (req: Request, res: Response) => {
   });
 
   if (!id || isNaN(Number(id))) {
-    return res.status(400).json({ error: 'ID inválido.' });
+    return res.status(400).json({ error: 'Funcionario não encontrado.' });
   }
-    if (cpf.length !== 11) {    
-    return res.status(400).json({ error: 'CPF deve conter exatamente 11 caracteres.' });
-    }
-
-    if (email.length < 5 || !email.includes('@')) {
-    return res.status(400).json({ error: 'Email inválido.' });
-    }
-
-    if (senha.length < 8) {
-    return res.status(400).json({ error: 'Senha deve conter no mínimo 8 caracteres.' });
-    }
 
   res.json(bibliotecario);
 };
@@ -71,7 +54,7 @@ export const deletarBibliotecario = async (req: Request, res: Response) => {
     where: { id: Number(id) },
   });
   if (!bibliotecario) {
-    return res.status(404).json({ message: 'Bibliotecário não encontrado' });
+    return res.status(404).json({ message: 'Funcionario não encontrado.' });
   }
   await prisma.bibliotecario.delete({
     where: { id: Number(id) },
