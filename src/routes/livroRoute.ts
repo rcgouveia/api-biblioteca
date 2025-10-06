@@ -3,7 +3,7 @@ import { listarLivros, obterLivroPorId, criarLivro , atualizarLivro, deletarLivr
 
 const router = Router();
 
-router.get("/Livro/Listar", listarLivros);
+router.get("/Livro/listar", listarLivros);
 router.get("/Livro/listar/:id", obterLivroPorId);
 router.post("/Livro/criar", criarLivro);
 router.put("/Livro/atualizar/:id", atualizarLivro);

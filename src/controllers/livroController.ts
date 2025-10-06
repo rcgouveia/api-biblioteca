@@ -1,14 +1,20 @@
 import type { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
+import { ca } from 'zod/locales';
 
 const prisma = new PrismaClient();
 
 export const listarLivros = async (req: Request, res: Response) => {
+ try {
   const livros = await prisma.livro.findMany();
   res.json(livros);
-}
+ } catch (error) {
+   res.status(500).json({ error: "Erro ao listar livros" });
+ }
+};
 
 export const obterLivroPorId = async (req: Request, res: Response) => {
+  try {
   const { id } = req.params;
   const livro = await prisma.livro.findUnique({
     where: { id: Number(id) },
@@ -18,10 +24,14 @@ export const obterLivroPorId = async (req: Request, res: Response) => {
     return res.status(400).json({ error: 'ID inválido.' });
   }
   res.json(livro);
+  } catch (error) {
+      res.status(500).json({ error: "Erro ao obter livro por ID" });
+    }
 
 };
 
 export const criarLivro = async (req: Request, res: Response) => {
+  try {
   const { titulo, descricao, genero, status, quantidade } = req.body;
     const livro = await prisma.livro.create({
       data: { titulo, descricao, genero, status, quantidade },
@@ -65,8 +75,12 @@ export const criarLivro = async (req: Request, res: Response) => {
     }
 
     res.json(livro);
+  } catch (error) {
+      res.status(500).json({ error: "Erro ao criar livro" });
+    }
   };
 export const atualizarLivro = async (req: Request, res: Response) => {
+  try {
   const { id } = req.params;
   const { titulo, descricao, genero, status, quantidade } = req.body;
   const livro = await prisma.livro.update({
@@ -104,19 +118,30 @@ export const atualizarLivro = async (req: Request, res: Response) => {
     });
   }
   res.json(livro);
+  } catch (error) {
+      res.status(500).json({ error: "Erro ao atualizar livro" });
+    }
 };
 export const deletarLivro = async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const livro = await prisma.livro.delete({
-    where: { id: Number(id) },
-  });
-  res.json(livro);
-  if (!id || isNaN(Number(id))) {
+  try {
+    const { id } = req.params;
+    const livro = await prisma.livro.delete({
+      where: { id: Number(id) },
+    });
+
+    if (!id || isNaN(Number(id))) {
     return res.status(400).json({ error: 'ID inválido.' });
+    }
+    
+    if (!livro) {
+      return res.status(404).json({ message: 'Livro não encontrado' });
+    }
+
+    res.json({ message: 'Livro deletado com sucesso' });
+
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao deletar livro" });
   }
-  if (!livro) {
-    return res.status(404).json({ message: 'Livro não encontrado' });
-  }
-  res.json({ message: 'Livro deletado com sucesso' });
+  
 };
 

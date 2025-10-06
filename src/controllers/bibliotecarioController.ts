@@ -4,23 +4,34 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export const listarBibliotecarios = async (req: Request, res: Response) => {
-  const bibliotecarios = await prisma.bibliotecario.findMany();
-  res.json(bibliotecarios);
+  try {
+    const bibliotecarios = await prisma.bibliotecario.findMany();
+    res.json(bibliotecarios);
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao listar bibliotecários" });
+  }
 };
 
 export const obterBibliotecarioPorId = async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const bibliotecario = await prisma.bibliotecario.findUnique({
+  try {
+    const { id } = req.params;
+    const bibliotecario = await prisma.bibliotecario.findUnique({
     where: { id: Number(id) },
   });
-  res.json(bibliotecario);
 
     if (!id || isNaN(Number(id))) {
       return res.status(400).json({ error: 'ID inválido.' });
     }
+
+  res.json(bibliotecario);
+
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao obter bibliotecário por ID" });
+    }
 };
 
 export const criarBibliotecario = async (req: Request, res: Response) => {
+  try {
   const { nome, email, senha, cpf } = req.body;
   const bibliotecario = await prisma.bibliotecario.create({
     data: { nome, email, senha, cpf },
@@ -37,9 +48,14 @@ export const criarBibliotecario = async (req: Request, res: Response) => {
     }
 
   res.status(201).json(bibliotecario);
+
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao criar bibliotecário" });
+  }
 };
 
 export const atualizarBibliotecario = async (req: Request, res: Response) => {
+  try {
   const { id } = req.params;
   const { nome, email, senha, cpf } = req.body;
   const bibliotecario = await prisma.bibliotecario.update({
@@ -63,18 +79,28 @@ export const atualizarBibliotecario = async (req: Request, res: Response) => {
     }
 
   res.json(bibliotecario);
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao atualizar bibliotecário" });
+  }
 };
 
 export const deletarBibliotecario = async (req: Request, res: Response) => {
+  try {
   const { id } = req.params;
   const bibliotecario = await prisma.bibliotecario.findUnique({
     where: { id: Number(id) },
   });
+
   if (!bibliotecario) {
     return res.status(404).json({ message: 'Bibliotecário não encontrado' });
   }
   await prisma.bibliotecario.delete({
     where: { id: Number(id) },
   });
-  res.status(204).send();
+
+  res.json({ message: 'Bibliotecário deletado com sucesso' });
+
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao deletar bibliotecário" });
+  }
 };

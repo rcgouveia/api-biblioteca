@@ -4,11 +4,16 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export const listarEmprestimos = async (req : Request, res: Response) => {
+  try {
   const emprestimos = await prisma.emprestimo.findMany();
   res.json(emprestimos);
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao listar empréstimos" });
+  }
 }
 
 export const obterEmprestimoPorId = async (req: Request, res: Response) => {
+  try {
   const { id } = req.params;
   const emprestimo = await prisma.emprestimo.findUnique({
     where: { id: Number(id) },
@@ -20,9 +25,14 @@ export const obterEmprestimoPorId = async (req: Request, res: Response) => {
     }
 
   res.json(emprestimo);
+  } catch (error) {
+      res.status(500).json({ error: "Erro ao obter empréstimo por ID" });
+    }
+  
 }
 
 export const criarEmprestimo = async (req: Request, res: Response) => {
+  try {
   const { clienteCpf, bibliotecarioId, livrosId, quantidade, dataPedido } = req.body;
   const emprestimo = await prisma.emprestimo.create({
     data: {
@@ -56,8 +66,12 @@ export const criarEmprestimo = async (req: Request, res: Response) => {
     }
 
   res.status(201).json(emprestimo);
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao criar empréstimo" });
+  }
 }
 export const atualizarEmprestimo = async (req: Request, res: Response) => {
+  try {
   const { id } = req.params;
   const { clienteCpf, bibliotecarioId, livroId, quantidade, dataPedido } = req.body;
   const emprestimo = await prisma.emprestimo.update({
@@ -95,10 +109,14 @@ export const atualizarEmprestimo = async (req: Request, res: Response) => {
     });
   }
   res.json(emprestimo);
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao atualizar empréstimo" });
+  }
 }
 
 
 export const deletarEmprestimo = async (req: Request, res: Response) => {
+  try {
   const { id } = req.params;
   const emprestimo = await prisma.emprestimo.findUnique({
     where: { id: Number(id) },
@@ -123,5 +141,9 @@ export const deletarEmprestimo = async (req: Request, res: Response) => {
   await prisma.emprestimo.delete({
     where: { id: Number(id) },
   });
-  res.status(204).send();
+  res.json({ message: 'Empréstimo deletado com sucesso' });
+  
+  } catch (error) {
+      res.status(500).json({ error: "Erro ao deletar empréstimo" });
+    }
 }

@@ -4,24 +4,36 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export const listarClientes = async (req: Request, res: Response) => {
-  const clientes = await prisma.cliente.findMany();
-  res.json(clientes);
+  try {
+    const clientes = await prisma.cliente.findMany();
+    res.json(clientes);
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao listar clientes" });
+  }
 };
 
 export const obterClientePorId = async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const cliente = await prisma.cliente.findUnique({
-    where: { id: Number(id) },
-  });
-  res.json(cliente);
+  try {
+    const { id } = req.params;
+    const cliente = await prisma.cliente.findUnique({
+      where: { id: Number(id) },
+    });
+    if (!id || isNaN(Number(id))) {
+    return res.status(400).json({ error: 'ID inválido.' });
+  }
+    res.json(cliente);
+
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao obter cliente por ID" });
+  }
 };
 
 export const criarCliente = async (req: Request, res: Response) => {
+  try {
   const { nome, email, senha, cpf } = req.body;
   const cliente = await prisma.cliente.create({
     data: { nome, email, senha, cpf },
   });
-
   if (cpf.length !== 11) {
     return res.status(400).json({ error: 'CPF deve conter exatamente 11 caracteres.' });
   }
@@ -35,17 +47,22 @@ export const criarCliente = async (req: Request, res: Response) => {
   }
 
   res.status(201).json(cliente);
+
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao criar cliente" });
+  }
+  
 };
 
 export const atualizarCliente = async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const { nome, email, senha, cpf } = req.body;
-  const cliente = await prisma.cliente.update({
-    where: { id: Number(id) },
-    data: { nome, email, senha, cpf },
-  });
-
-  if (!id || isNaN(Number(id))) {
+  try {
+    const { id } = req.params;
+    const { nome, email, senha, cpf } = req.body;
+    const cliente = await prisma.cliente.update({
+      where: { id: Number(id) },
+      data: { nome, email, senha, cpf },
+    });
+    if (!id || isNaN(Number(id))) {
     return res.status(400).json({ error: 'ID inválido.' });
   }
 
@@ -61,9 +78,14 @@ export const atualizarCliente = async (req: Request, res: Response) => {
   }
 
   res.json(cliente);
+
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao atualizar cliente" });
+  }
 };
 
 export const deletarCliente = async (req: Request, res: Response) => {
+  try {
   const { id } = req.params;
   const cliente = await prisma.cliente.findUnique({
     where: { id: Number(id) },
@@ -75,5 +97,9 @@ export const deletarCliente = async (req: Request, res: Response) => {
     where: { id: Number(id) },
   });
 
-  res.status(204).end();
+  res.json({ message: 'Cliente deletado com sucesso' });
+
+  } catch (error) { 
+    res.status(500).json({ error: "Erro ao deletar cliente" });
+  }
 };
