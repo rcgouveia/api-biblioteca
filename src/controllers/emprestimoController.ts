@@ -5,16 +5,21 @@ import * as emprestimoService from '../services/emprestimoService'
 
 const prisma = new PrismaClient();
 
-export const listarEmprestimos = async (req : Request, res: Response) => {
+export const listarEmprestimos = async (req: Request, res: Response) => {
   const emprestimos = await emprestimoService.getAll();
-  return res.status(201).json(emprestimos);
-}
+
+  if (!emprestimos || emprestimos.length === 0) {
+    return res.status(404).json({ message: 'Nenhum empréstimo encontrado' });
+  }
+
+  return res.status(200).json(emprestimos);
+};
 
 export const obterEmprestimoPorCpf = async (req: Request, res: Response) => {
   const { cpf } = req.params;
 
   if (!cpf || typeof cpf !== 'string') {
-    return res.status(400).json({ error: 'Emprestimo não encontrado.' });
+    return res.status(400).json({ error: `Emprestimo com cpf:${cpf} não encontrado.` });
   }
   const emprestimo = await emprestimoService.getByCpf(String(cpf));
 

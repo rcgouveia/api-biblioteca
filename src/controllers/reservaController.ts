@@ -8,6 +8,9 @@ const prisma = new PrismaClient();
 export const listarReservas = async (req: Request, res: Response) =>{
     try{
         const reservas = await reservaService.getAll()
+        if (!reservas || reservas.length === 0) {
+        return res.status(404).json({ message: 'Nenhuma reserva encontrada' })}
+
         return res.status(201).json(reservas)
     } catch (error: any) {
         return res.status(400).json({message: error.message})
@@ -18,6 +21,8 @@ export const listarReservasPorCpf = async (req: Request, res: Response) =>{
     try{
         const {cpf} = req.params
         const reservas = await reservaService.getByCpf(String(cpf))
+        if (!reservas || reservas.length === 0) {
+        return res.status(404).json({ message: `Reserva com id: ${cpf} não encontrada` })}
         return res.status(201).json(reservas)
     } catch (error:any){
         return res.status(500).json({message: error.message})

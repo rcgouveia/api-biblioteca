@@ -6,6 +6,9 @@ const prisma = new PrismaClient();
 export const listarBibliotecarios = async (req: Request, res: Response) => {
   const bibliotecarios = await prisma.bibliotecario.findMany();
   res.json(bibliotecarios);
+  if (!bibliotecarios) {
+      return res.status(404).json({ message: 'Bibliotecario não encontrado' });
+  }
 };
 
 export const obterBibliotecarioPorId = async (req: Request, res: Response) => {
@@ -13,11 +16,14 @@ export const obterBibliotecarioPorId = async (req: Request, res: Response) => {
   const bibliotecario = await prisma.bibliotecario.findUnique({
     where: { id: Number(id) },
   });
-  res.json(bibliotecario);
+    if (!bibliotecario) {
+      return res.status(404).json({ message: `Cliente com ID ${id} não encontrado` });
+    }
 
     if (!id || isNaN(Number(id))) {
       return res.status(400).json({ error: 'Funcionario não encontrado.' });
     }
+    res.status(200).json(bibliotecario);
 };
 
 export const criarBibliotecario = async (req: Request, res: Response) => {

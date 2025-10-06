@@ -65,6 +65,7 @@ model Emprestimo {
   clienteCpf      String
   bibliotecarioId Int
   livrosId        Int
+  codEmprestimo   Int
 
   livro         Livro         @relation(fields: [livrosId], references: [id])
   cliente       Cliente       @relation(fields: [clienteCpf], references: [cpf])
@@ -81,6 +82,7 @@ model Reserva {
   clienteCpf      String
   bibliotecarioId Int
   livrosId        Int
+  codReserva      Int
 
   livro         Livro         @relation(fields: [livrosId], references: [id])
   cliente       Cliente       @relation(fields: [clienteCpf], references: [cpf])

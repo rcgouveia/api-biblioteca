@@ -4850,12 +4850,14 @@ export namespace Prisma {
     id: number | null
     bibliotecarioId: number | null
     livrosId: number | null
+    codEmprestimo: number | null
   }
 
   export type EmprestimoSumAggregateOutputType = {
     id: number | null
     bibliotecarioId: number | null
     livrosId: number | null
+    codEmprestimo: number | null
   }
 
   export type EmprestimoMinAggregateOutputType = {
@@ -4866,6 +4868,7 @@ export namespace Prisma {
     clienteCpf: string | null
     bibliotecarioId: number | null
     livrosId: number | null
+    codEmprestimo: number | null
   }
 
   export type EmprestimoMaxAggregateOutputType = {
@@ -4876,6 +4879,7 @@ export namespace Prisma {
     clienteCpf: string | null
     bibliotecarioId: number | null
     livrosId: number | null
+    codEmprestimo: number | null
   }
 
   export type EmprestimoCountAggregateOutputType = {
@@ -4886,6 +4890,7 @@ export namespace Prisma {
     clienteCpf: number
     bibliotecarioId: number
     livrosId: number
+    codEmprestimo: number
     _all: number
   }
 
@@ -4894,12 +4899,14 @@ export namespace Prisma {
     id?: true
     bibliotecarioId?: true
     livrosId?: true
+    codEmprestimo?: true
   }
 
   export type EmprestimoSumAggregateInputType = {
     id?: true
     bibliotecarioId?: true
     livrosId?: true
+    codEmprestimo?: true
   }
 
   export type EmprestimoMinAggregateInputType = {
@@ -4910,6 +4917,7 @@ export namespace Prisma {
     clienteCpf?: true
     bibliotecarioId?: true
     livrosId?: true
+    codEmprestimo?: true
   }
 
   export type EmprestimoMaxAggregateInputType = {
@@ -4920,6 +4928,7 @@ export namespace Prisma {
     clienteCpf?: true
     bibliotecarioId?: true
     livrosId?: true
+    codEmprestimo?: true
   }
 
   export type EmprestimoCountAggregateInputType = {
@@ -4930,6 +4939,7 @@ export namespace Prisma {
     clienteCpf?: true
     bibliotecarioId?: true
     livrosId?: true
+    codEmprestimo?: true
     _all?: true
   }
 
@@ -5027,6 +5037,7 @@ export namespace Prisma {
     clienteCpf: string
     bibliotecarioId: number
     livrosId: number
+    codEmprestimo: number
     _count: EmprestimoCountAggregateOutputType | null
     _avg: EmprestimoAvgAggregateOutputType | null
     _sum: EmprestimoSumAggregateOutputType | null
@@ -5056,6 +5067,7 @@ export namespace Prisma {
     clienteCpf?: boolean
     bibliotecarioId?: boolean
     livrosId?: boolean
+    codEmprestimo?: boolean
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
     bibliotecario?: boolean | BibliotecarioDefaultArgs<ExtArgs>
@@ -5069,6 +5081,7 @@ export namespace Prisma {
     clienteCpf?: boolean
     bibliotecarioId?: boolean
     livrosId?: boolean
+    codEmprestimo?: boolean
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
     bibliotecario?: boolean | BibliotecarioDefaultArgs<ExtArgs>
@@ -5082,6 +5095,7 @@ export namespace Prisma {
     clienteCpf?: boolean
     bibliotecarioId?: boolean
     livrosId?: boolean
+    codEmprestimo?: boolean
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
     bibliotecario?: boolean | BibliotecarioDefaultArgs<ExtArgs>
@@ -5095,9 +5109,10 @@ export namespace Prisma {
     clienteCpf?: boolean
     bibliotecarioId?: boolean
     livrosId?: boolean
+    codEmprestimo?: boolean
   }
 
-  export type EmprestimoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "dataPedido" | "createdAt" | "updatedAt" | "clienteCpf" | "bibliotecarioId" | "livrosId", ExtArgs["result"]["emprestimo"]>
+  export type EmprestimoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "dataPedido" | "createdAt" | "updatedAt" | "clienteCpf" | "bibliotecarioId" | "livrosId" | "codEmprestimo", ExtArgs["result"]["emprestimo"]>
   export type EmprestimoInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
@@ -5129,6 +5144,7 @@ export namespace Prisma {
       clienteCpf: string
       bibliotecarioId: number
       livrosId: number
+      codEmprestimo: number
     }, ExtArgs["result"]["emprestimo"]>
     composites: {}
   }
@@ -5562,6 +5578,7 @@ export namespace Prisma {
     readonly clienteCpf: FieldRef<"Emprestimo", 'String'>
     readonly bibliotecarioId: FieldRef<"Emprestimo", 'Int'>
     readonly livrosId: FieldRef<"Emprestimo", 'Int'>
+    readonly codEmprestimo: FieldRef<"Emprestimo", 'Int'>
   }
     
 
@@ -5992,12 +6009,14 @@ export namespace Prisma {
     id: number | null
     bibliotecarioId: number | null
     livrosId: number | null
+    codReserva: number | null
   }
 
   export type ReservaSumAggregateOutputType = {
     id: number | null
     bibliotecarioId: number | null
     livrosId: number | null
+    codReserva: number | null
   }
 
   export type ReservaMinAggregateOutputType = {
@@ -6008,6 +6027,7 @@ export namespace Prisma {
     clienteCpf: string | null
     bibliotecarioId: number | null
     livrosId: number | null
+    codReserva: number | null
   }
 
   export type ReservaMaxAggregateOutputType = {
@@ -6018,6 +6038,7 @@ export namespace Prisma {
     clienteCpf: string | null
     bibliotecarioId: number | null
     livrosId: number | null
+    codReserva: number | null
   }
 
   export type ReservaCountAggregateOutputType = {
@@ -6028,6 +6049,7 @@ export namespace Prisma {
     clienteCpf: number
     bibliotecarioId: number
     livrosId: number
+    codReserva: number
     _all: number
   }
 
@@ -6036,12 +6058,14 @@ export namespace Prisma {
     id?: true
     bibliotecarioId?: true
     livrosId?: true
+    codReserva?: true
   }
 
   export type ReservaSumAggregateInputType = {
     id?: true
     bibliotecarioId?: true
     livrosId?: true
+    codReserva?: true
   }
 
   export type ReservaMinAggregateInputType = {
@@ -6052,6 +6076,7 @@ export namespace Prisma {
     clienteCpf?: true
     bibliotecarioId?: true
     livrosId?: true
+    codReserva?: true
   }
 
   export type ReservaMaxAggregateInputType = {
@@ -6062,6 +6087,7 @@ export namespace Prisma {
     clienteCpf?: true
     bibliotecarioId?: true
     livrosId?: true
+    codReserva?: true
   }
 
   export type ReservaCountAggregateInputType = {
@@ -6072,6 +6098,7 @@ export namespace Prisma {
     clienteCpf?: true
     bibliotecarioId?: true
     livrosId?: true
+    codReserva?: true
     _all?: true
   }
 
@@ -6169,6 +6196,7 @@ export namespace Prisma {
     clienteCpf: string
     bibliotecarioId: number
     livrosId: number
+    codReserva: number
     _count: ReservaCountAggregateOutputType | null
     _avg: ReservaAvgAggregateOutputType | null
     _sum: ReservaSumAggregateOutputType | null
@@ -6198,6 +6226,7 @@ export namespace Prisma {
     clienteCpf?: boolean
     bibliotecarioId?: boolean
     livrosId?: boolean
+    codReserva?: boolean
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
     bibliotecario?: boolean | BibliotecarioDefaultArgs<ExtArgs>
@@ -6211,6 +6240,7 @@ export namespace Prisma {
     clienteCpf?: boolean
     bibliotecarioId?: boolean
     livrosId?: boolean
+    codReserva?: boolean
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
     bibliotecario?: boolean | BibliotecarioDefaultArgs<ExtArgs>
@@ -6224,6 +6254,7 @@ export namespace Prisma {
     clienteCpf?: boolean
     bibliotecarioId?: boolean
     livrosId?: boolean
+    codReserva?: boolean
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
     bibliotecario?: boolean | BibliotecarioDefaultArgs<ExtArgs>
@@ -6237,9 +6268,10 @@ export namespace Prisma {
     clienteCpf?: boolean
     bibliotecarioId?: boolean
     livrosId?: boolean
+    codReserva?: boolean
   }
 
-  export type ReservaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "dataPedido" | "createdAt" | "updatedAt" | "clienteCpf" | "bibliotecarioId" | "livrosId", ExtArgs["result"]["reserva"]>
+  export type ReservaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "dataPedido" | "createdAt" | "updatedAt" | "clienteCpf" | "bibliotecarioId" | "livrosId" | "codReserva", ExtArgs["result"]["reserva"]>
   export type ReservaInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
@@ -6271,6 +6303,7 @@ export namespace Prisma {
       clienteCpf: string
       bibliotecarioId: number
       livrosId: number
+      codReserva: number
     }, ExtArgs["result"]["reserva"]>
     composites: {}
   }
@@ -6704,6 +6737,7 @@ export namespace Prisma {
     readonly clienteCpf: FieldRef<"Reserva", 'String'>
     readonly bibliotecarioId: FieldRef<"Reserva", 'Int'>
     readonly livrosId: FieldRef<"Reserva", 'Int'>
+    readonly codReserva: FieldRef<"Reserva", 'Int'>
   }
     
 
@@ -7179,7 +7213,8 @@ export namespace Prisma {
     updatedAt: 'updatedAt',
     clienteCpf: 'clienteCpf',
     bibliotecarioId: 'bibliotecarioId',
-    livrosId: 'livrosId'
+    livrosId: 'livrosId',
+    codEmprestimo: 'codEmprestimo'
   };
 
   export type EmprestimoScalarFieldEnum = (typeof EmprestimoScalarFieldEnum)[keyof typeof EmprestimoScalarFieldEnum]
@@ -7192,7 +7227,8 @@ export namespace Prisma {
     updatedAt: 'updatedAt',
     clienteCpf: 'clienteCpf',
     bibliotecarioId: 'bibliotecarioId',
-    livrosId: 'livrosId'
+    livrosId: 'livrosId',
+    codReserva: 'codReserva'
   };
 
   export type ReservaScalarFieldEnum = (typeof ReservaScalarFieldEnum)[keyof typeof ReservaScalarFieldEnum]
@@ -7511,6 +7547,7 @@ export namespace Prisma {
     clienteCpf?: StringFilter<"Emprestimo"> | string
     bibliotecarioId?: IntFilter<"Emprestimo"> | number
     livrosId?: IntFilter<"Emprestimo"> | number
+    codEmprestimo?: IntFilter<"Emprestimo"> | number
     livro?: XOR<LivroScalarRelationFilter, LivroWhereInput>
     cliente?: XOR<ClienteScalarRelationFilter, ClienteWhereInput>
     bibliotecario?: XOR<BibliotecarioScalarRelationFilter, BibliotecarioWhereInput>
@@ -7524,6 +7561,7 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codEmprestimo?: SortOrder
     livro?: LivroOrderByWithRelationInput
     cliente?: ClienteOrderByWithRelationInput
     bibliotecario?: BibliotecarioOrderByWithRelationInput
@@ -7540,6 +7578,7 @@ export namespace Prisma {
     clienteCpf?: StringFilter<"Emprestimo"> | string
     bibliotecarioId?: IntFilter<"Emprestimo"> | number
     livrosId?: IntFilter<"Emprestimo"> | number
+    codEmprestimo?: IntFilter<"Emprestimo"> | number
     livro?: XOR<LivroScalarRelationFilter, LivroWhereInput>
     cliente?: XOR<ClienteScalarRelationFilter, ClienteWhereInput>
     bibliotecario?: XOR<BibliotecarioScalarRelationFilter, BibliotecarioWhereInput>
@@ -7553,6 +7592,7 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codEmprestimo?: SortOrder
     _count?: EmprestimoCountOrderByAggregateInput
     _avg?: EmprestimoAvgOrderByAggregateInput
     _max?: EmprestimoMaxOrderByAggregateInput
@@ -7571,6 +7611,7 @@ export namespace Prisma {
     clienteCpf?: StringWithAggregatesFilter<"Emprestimo"> | string
     bibliotecarioId?: IntWithAggregatesFilter<"Emprestimo"> | number
     livrosId?: IntWithAggregatesFilter<"Emprestimo"> | number
+    codEmprestimo?: IntWithAggregatesFilter<"Emprestimo"> | number
   }
 
   export type ReservaWhereInput = {
@@ -7584,6 +7625,7 @@ export namespace Prisma {
     clienteCpf?: StringFilter<"Reserva"> | string
     bibliotecarioId?: IntFilter<"Reserva"> | number
     livrosId?: IntFilter<"Reserva"> | number
+    codReserva?: IntFilter<"Reserva"> | number
     livro?: XOR<LivroScalarRelationFilter, LivroWhereInput>
     cliente?: XOR<ClienteScalarRelationFilter, ClienteWhereInput>
     bibliotecario?: XOR<BibliotecarioScalarRelationFilter, BibliotecarioWhereInput>
@@ -7597,6 +7639,7 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codReserva?: SortOrder
     livro?: LivroOrderByWithRelationInput
     cliente?: ClienteOrderByWithRelationInput
     bibliotecario?: BibliotecarioOrderByWithRelationInput
@@ -7613,6 +7656,7 @@ export namespace Prisma {
     clienteCpf?: StringFilter<"Reserva"> | string
     bibliotecarioId?: IntFilter<"Reserva"> | number
     livrosId?: IntFilter<"Reserva"> | number
+    codReserva?: IntFilter<"Reserva"> | number
     livro?: XOR<LivroScalarRelationFilter, LivroWhereInput>
     cliente?: XOR<ClienteScalarRelationFilter, ClienteWhereInput>
     bibliotecario?: XOR<BibliotecarioScalarRelationFilter, BibliotecarioWhereInput>
@@ -7626,6 +7670,7 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codReserva?: SortOrder
     _count?: ReservaCountOrderByAggregateInput
     _avg?: ReservaAvgOrderByAggregateInput
     _max?: ReservaMaxOrderByAggregateInput
@@ -7644,6 +7689,7 @@ export namespace Prisma {
     clienteCpf?: StringWithAggregatesFilter<"Reserva"> | string
     bibliotecarioId?: IntWithAggregatesFilter<"Reserva"> | number
     livrosId?: IntWithAggregatesFilter<"Reserva"> | number
+    codReserva?: IntWithAggregatesFilter<"Reserva"> | number
   }
 
   export type ClienteCreateInput = {
@@ -7882,6 +7928,7 @@ export namespace Prisma {
     dataPedido: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
+    codEmprestimo: number
     livro: LivroCreateNestedOneWithoutEmprestimosInput
     cliente: ClienteCreateNestedOneWithoutEmprestimosInput
     bibliotecario: BibliotecarioCreateNestedOneWithoutEmprestimosInput
@@ -7895,12 +7942,14 @@ export namespace Prisma {
     clienteCpf: string
     bibliotecarioId: number
     livrosId: number
+    codEmprestimo: number
   }
 
   export type EmprestimoUpdateInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
     livro?: LivroUpdateOneRequiredWithoutEmprestimosNestedInput
     cliente?: ClienteUpdateOneRequiredWithoutEmprestimosNestedInput
     bibliotecario?: BibliotecarioUpdateOneRequiredWithoutEmprestimosNestedInput
@@ -7914,6 +7963,7 @@ export namespace Prisma {
     clienteCpf?: StringFieldUpdateOperationsInput | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
     livrosId?: IntFieldUpdateOperationsInput | number
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type EmprestimoCreateManyInput = {
@@ -7924,12 +7974,14 @@ export namespace Prisma {
     clienteCpf: string
     bibliotecarioId: number
     livrosId: number
+    codEmprestimo: number
   }
 
   export type EmprestimoUpdateManyMutationInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type EmprestimoUncheckedUpdateManyInput = {
@@ -7940,12 +7992,14 @@ export namespace Prisma {
     clienteCpf?: StringFieldUpdateOperationsInput | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
     livrosId?: IntFieldUpdateOperationsInput | number
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaCreateInput = {
     dataPedido: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
+    codReserva: number
     livro: LivroCreateNestedOneWithoutReservasInput
     cliente: ClienteCreateNestedOneWithoutReservasInput
     bibliotecario: BibliotecarioCreateNestedOneWithoutReservasInput
@@ -7959,12 +8013,14 @@ export namespace Prisma {
     clienteCpf: string
     bibliotecarioId: number
     livrosId: number
+    codReserva: number
   }
 
   export type ReservaUpdateInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codReserva?: IntFieldUpdateOperationsInput | number
     livro?: LivroUpdateOneRequiredWithoutReservasNestedInput
     cliente?: ClienteUpdateOneRequiredWithoutReservasNestedInput
     bibliotecario?: BibliotecarioUpdateOneRequiredWithoutReservasNestedInput
@@ -7978,6 +8034,7 @@ export namespace Prisma {
     clienteCpf?: StringFieldUpdateOperationsInput | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
     livrosId?: IntFieldUpdateOperationsInput | number
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaCreateManyInput = {
@@ -7988,12 +8045,14 @@ export namespace Prisma {
     clienteCpf: string
     bibliotecarioId: number
     livrosId: number
+    codReserva: number
   }
 
   export type ReservaUpdateManyMutationInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUncheckedUpdateManyInput = {
@@ -8004,6 +8063,7 @@ export namespace Prisma {
     clienteCpf?: StringFieldUpdateOperationsInput | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
     livrosId?: IntFieldUpdateOperationsInput | number
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -8266,12 +8326,14 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codEmprestimo?: SortOrder
   }
 
   export type EmprestimoAvgOrderByAggregateInput = {
     id?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codEmprestimo?: SortOrder
   }
 
   export type EmprestimoMaxOrderByAggregateInput = {
@@ -8282,6 +8344,7 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codEmprestimo?: SortOrder
   }
 
   export type EmprestimoMinOrderByAggregateInput = {
@@ -8292,12 +8355,14 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codEmprestimo?: SortOrder
   }
 
   export type EmprestimoSumOrderByAggregateInput = {
     id?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codEmprestimo?: SortOrder
   }
 
   export type ReservaCountOrderByAggregateInput = {
@@ -8308,12 +8373,14 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codReserva?: SortOrder
   }
 
   export type ReservaAvgOrderByAggregateInput = {
     id?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codReserva?: SortOrder
   }
 
   export type ReservaMaxOrderByAggregateInput = {
@@ -8324,6 +8391,7 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codReserva?: SortOrder
   }
 
   export type ReservaMinOrderByAggregateInput = {
@@ -8334,12 +8402,14 @@ export namespace Prisma {
     clienteCpf?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codReserva?: SortOrder
   }
 
   export type ReservaSumOrderByAggregateInput = {
     id?: SortOrder
     bibliotecarioId?: SortOrder
     livrosId?: SortOrder
+    codReserva?: SortOrder
   }
 
   export type EmprestimoCreateNestedManyWithoutClienteInput = {
@@ -8809,6 +8879,7 @@ export namespace Prisma {
     dataPedido: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
+    codEmprestimo: number
     livro: LivroCreateNestedOneWithoutEmprestimosInput
     bibliotecario: BibliotecarioCreateNestedOneWithoutEmprestimosInput
   }
@@ -8820,6 +8891,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     bibliotecarioId: number
     livrosId: number
+    codEmprestimo: number
   }
 
   export type EmprestimoCreateOrConnectWithoutClienteInput = {
@@ -8836,6 +8908,7 @@ export namespace Prisma {
     dataPedido: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
+    codReserva: number
     livro: LivroCreateNestedOneWithoutReservasInput
     bibliotecario: BibliotecarioCreateNestedOneWithoutReservasInput
   }
@@ -8847,6 +8920,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     bibliotecarioId: number
     livrosId: number
+    codReserva: number
   }
 
   export type ReservaCreateOrConnectWithoutClienteInput = {
@@ -8886,6 +8960,7 @@ export namespace Prisma {
     clienteCpf?: StringFilter<"Emprestimo"> | string
     bibliotecarioId?: IntFilter<"Emprestimo"> | number
     livrosId?: IntFilter<"Emprestimo"> | number
+    codEmprestimo?: IntFilter<"Emprestimo"> | number
   }
 
   export type ReservaUpsertWithWhereUniqueWithoutClienteInput = {
@@ -8915,12 +8990,14 @@ export namespace Prisma {
     clienteCpf?: StringFilter<"Reserva"> | string
     bibliotecarioId?: IntFilter<"Reserva"> | number
     livrosId?: IntFilter<"Reserva"> | number
+    codReserva?: IntFilter<"Reserva"> | number
   }
 
   export type EmprestimoCreateWithoutBibliotecarioInput = {
     dataPedido: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
+    codEmprestimo: number
     livro: LivroCreateNestedOneWithoutEmprestimosInput
     cliente: ClienteCreateNestedOneWithoutEmprestimosInput
   }
@@ -8932,6 +9009,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     clienteCpf: string
     livrosId: number
+    codEmprestimo: number
   }
 
   export type EmprestimoCreateOrConnectWithoutBibliotecarioInput = {
@@ -8948,6 +9026,7 @@ export namespace Prisma {
     dataPedido: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
+    codReserva: number
     livro: LivroCreateNestedOneWithoutReservasInput
     cliente: ClienteCreateNestedOneWithoutReservasInput
   }
@@ -8959,6 +9038,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     clienteCpf: string
     livrosId: number
+    codReserva: number
   }
 
   export type ReservaCreateOrConnectWithoutBibliotecarioInput = {
@@ -9007,6 +9087,7 @@ export namespace Prisma {
     dataPedido: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
+    codEmprestimo: number
     cliente: ClienteCreateNestedOneWithoutEmprestimosInput
     bibliotecario: BibliotecarioCreateNestedOneWithoutEmprestimosInput
   }
@@ -9018,6 +9099,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     clienteCpf: string
     bibliotecarioId: number
+    codEmprestimo: number
   }
 
   export type EmprestimoCreateOrConnectWithoutLivroInput = {
@@ -9034,6 +9116,7 @@ export namespace Prisma {
     dataPedido: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
+    codReserva: number
     cliente: ClienteCreateNestedOneWithoutReservasInput
     bibliotecario: BibliotecarioCreateNestedOneWithoutReservasInput
   }
@@ -9045,6 +9128,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     clienteCpf: string
     bibliotecarioId: number
+    codReserva: number
   }
 
   export type ReservaCreateOrConnectWithoutLivroInput = {
@@ -9452,6 +9536,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     bibliotecarioId: number
     livrosId: number
+    codEmprestimo: number
   }
 
   export type ReservaCreateManyClienteInput = {
@@ -9461,12 +9546,14 @@ export namespace Prisma {
     updatedAt?: Date | string
     bibliotecarioId: number
     livrosId: number
+    codReserva: number
   }
 
   export type EmprestimoUpdateWithoutClienteInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
     livro?: LivroUpdateOneRequiredWithoutEmprestimosNestedInput
     bibliotecario?: BibliotecarioUpdateOneRequiredWithoutEmprestimosNestedInput
   }
@@ -9478,6 +9565,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
     livrosId?: IntFieldUpdateOperationsInput | number
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type EmprestimoUncheckedUpdateManyWithoutClienteInput = {
@@ -9487,12 +9575,14 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
     livrosId?: IntFieldUpdateOperationsInput | number
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUpdateWithoutClienteInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codReserva?: IntFieldUpdateOperationsInput | number
     livro?: LivroUpdateOneRequiredWithoutReservasNestedInput
     bibliotecario?: BibliotecarioUpdateOneRequiredWithoutReservasNestedInput
   }
@@ -9504,6 +9594,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
     livrosId?: IntFieldUpdateOperationsInput | number
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUncheckedUpdateManyWithoutClienteInput = {
@@ -9513,6 +9604,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
     livrosId?: IntFieldUpdateOperationsInput | number
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
   export type EmprestimoCreateManyBibliotecarioInput = {
@@ -9522,6 +9614,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     clienteCpf: string
     livrosId: number
+    codEmprestimo: number
   }
 
   export type ReservaCreateManyBibliotecarioInput = {
@@ -9531,12 +9624,14 @@ export namespace Prisma {
     updatedAt?: Date | string
     clienteCpf: string
     livrosId: number
+    codReserva: number
   }
 
   export type EmprestimoUpdateWithoutBibliotecarioInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
     livro?: LivroUpdateOneRequiredWithoutEmprestimosNestedInput
     cliente?: ClienteUpdateOneRequiredWithoutEmprestimosNestedInput
   }
@@ -9548,6 +9643,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
     livrosId?: IntFieldUpdateOperationsInput | number
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type EmprestimoUncheckedUpdateManyWithoutBibliotecarioInput = {
@@ -9557,12 +9653,14 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
     livrosId?: IntFieldUpdateOperationsInput | number
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUpdateWithoutBibliotecarioInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codReserva?: IntFieldUpdateOperationsInput | number
     livro?: LivroUpdateOneRequiredWithoutReservasNestedInput
     cliente?: ClienteUpdateOneRequiredWithoutReservasNestedInput
   }
@@ -9574,6 +9672,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
     livrosId?: IntFieldUpdateOperationsInput | number
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUncheckedUpdateManyWithoutBibliotecarioInput = {
@@ -9583,6 +9682,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
     livrosId?: IntFieldUpdateOperationsInput | number
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
   export type EmprestimoCreateManyLivroInput = {
@@ -9592,6 +9692,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     clienteCpf: string
     bibliotecarioId: number
+    codEmprestimo: number
   }
 
   export type ReservaCreateManyLivroInput = {
@@ -9601,12 +9702,14 @@ export namespace Prisma {
     updatedAt?: Date | string
     clienteCpf: string
     bibliotecarioId: number
+    codReserva: number
   }
 
   export type EmprestimoUpdateWithoutLivroInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
     cliente?: ClienteUpdateOneRequiredWithoutEmprestimosNestedInput
     bibliotecario?: BibliotecarioUpdateOneRequiredWithoutEmprestimosNestedInput
   }
@@ -9618,6 +9721,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type EmprestimoUncheckedUpdateManyWithoutLivroInput = {
@@ -9627,12 +9731,14 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
+    codEmprestimo?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUpdateWithoutLivroInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    codReserva?: IntFieldUpdateOperationsInput | number
     cliente?: ClienteUpdateOneRequiredWithoutReservasNestedInput
     bibliotecario?: BibliotecarioUpdateOneRequiredWithoutReservasNestedInput
   }
@@ -9644,6 +9750,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUncheckedUpdateManyWithoutLivroInput = {
@@ -9653,6 +9760,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
+    codReserva?: IntFieldUpdateOperationsInput | number
   }
 
 

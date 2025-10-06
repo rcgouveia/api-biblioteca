@@ -5,7 +5,10 @@ const prisma = new PrismaClient();
 
 export const listarLivros = async (req: Request, res: Response) => {
   const livros = await prisma.livro.findMany();
-  res.json(livros);
+  if (!livros || livros.length === 0) {
+    return res.status(404).json({ message: 'Nenhum Livro encontrado' });
+  }
+  res.status(200).json(livros);
 }
 
 export const obterLivroPorId = async (req: Request, res: Response) => {
@@ -17,7 +20,7 @@ export const obterLivroPorId = async (req: Request, res: Response) => {
   if (!id || isNaN(Number(id))) {
     return res.status(400).json({ error: 'ID inválido.' });
   }
-  res.json(livro);
+  res.status(200).json(livro);
 
 };
 

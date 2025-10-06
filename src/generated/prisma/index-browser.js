@@ -158,7 +158,8 @@ exports.Prisma.EmprestimoScalarFieldEnum = {
   updatedAt: 'updatedAt',
   clienteCpf: 'clienteCpf',
   bibliotecarioId: 'bibliotecarioId',
-  livrosId: 'livrosId'
+  livrosId: 'livrosId',
+  codEmprestimo: 'codEmprestimo'
 };
 
 exports.Prisma.ReservaScalarFieldEnum = {
@@ -168,7 +169,8 @@ exports.Prisma.ReservaScalarFieldEnum = {
   updatedAt: 'updatedAt',
   clienteCpf: 'clienteCpf',
   bibliotecarioId: 'bibliotecarioId',
-  livrosId: 'livrosId'
+  livrosId: 'livrosId',
+  codReserva: 'codReserva'
 };
 
 exports.Prisma.SortOrder = {
