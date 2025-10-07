@@ -5,7 +5,9 @@ services:
     image: postgres
     container_name: projeto-biblioteca
     environment:
-      - POSTGRES_PASSWORD=0987
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 987
+      POSTGRES_DB: biblioteca
     ports:
       - "5432:5432"
     restart: unless-stopped
