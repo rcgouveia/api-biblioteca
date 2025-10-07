@@ -64,7 +64,7 @@ router.get("/bibliotecarios/listar/:id",validateParams(idParamSchema), obterBibl
  *       required: true
  *       content:
  *         application/json:
- *           schema:
+ *            schema:    
  *             type: object
  *             required:
  *               - nome
@@ -80,6 +80,11 @@ router.get("/bibliotecarios/listar/:id",validateParams(idParamSchema), obterBibl
  *                 type: string
  *               cpf:
  *                 type: string
+ *             example:
+ *               nome: Nome
+ *               email: Email@example.com
+ *               senha: senha1
+ *               cpf: 12345678901
  *     responses:
  *       201:
  *         description: Bibliotecário criado com sucesso

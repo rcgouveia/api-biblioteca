@@ -62,6 +62,7 @@ model Livro{
 model Emprestimo{
   id Int @id @default(autoincrement())
   dataPedido DateTime
+  dataDevolucao DateTime
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
   clienteCpf String
@@ -80,6 +81,7 @@ model Emprestimo{
 model Reserva{
    id Int @id @default(autoincrement())
   dataPedido DateTime
+  dataDevolucao DateTime
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
   clienteCpf String

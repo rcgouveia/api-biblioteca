@@ -154,6 +154,7 @@ exports.Prisma.LivroScalarFieldEnum = {
 exports.Prisma.EmprestimoScalarFieldEnum = {
   id: 'id',
   dataPedido: 'dataPedido',
+  dataDevolucao: 'dataDevolucao',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   clienteCpf: 'clienteCpf',
@@ -165,6 +166,7 @@ exports.Prisma.EmprestimoScalarFieldEnum = {
 exports.Prisma.ReservaScalarFieldEnum = {
   id: 'id',
   dataPedido: 'dataPedido',
+  dataDevolucao: 'dataDevolucao',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   clienteCpf: 'clienteCpf',

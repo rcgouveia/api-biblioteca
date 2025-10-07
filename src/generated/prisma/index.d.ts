@@ -4863,6 +4863,7 @@ export namespace Prisma {
   export type EmprestimoMinAggregateOutputType = {
     id: number | null
     dataPedido: Date | null
+    dataDevolucao: Date | null
     createdAt: Date | null
     updatedAt: Date | null
     clienteCpf: string | null
@@ -4874,6 +4875,7 @@ export namespace Prisma {
   export type EmprestimoMaxAggregateOutputType = {
     id: number | null
     dataPedido: Date | null
+    dataDevolucao: Date | null
     createdAt: Date | null
     updatedAt: Date | null
     clienteCpf: string | null
@@ -4885,6 +4887,7 @@ export namespace Prisma {
   export type EmprestimoCountAggregateOutputType = {
     id: number
     dataPedido: number
+    dataDevolucao: number
     createdAt: number
     updatedAt: number
     clienteCpf: number
@@ -4912,6 +4915,7 @@ export namespace Prisma {
   export type EmprestimoMinAggregateInputType = {
     id?: true
     dataPedido?: true
+    dataDevolucao?: true
     createdAt?: true
     updatedAt?: true
     clienteCpf?: true
@@ -4923,6 +4927,7 @@ export namespace Prisma {
   export type EmprestimoMaxAggregateInputType = {
     id?: true
     dataPedido?: true
+    dataDevolucao?: true
     createdAt?: true
     updatedAt?: true
     clienteCpf?: true
@@ -4934,6 +4939,7 @@ export namespace Prisma {
   export type EmprestimoCountAggregateInputType = {
     id?: true
     dataPedido?: true
+    dataDevolucao?: true
     createdAt?: true
     updatedAt?: true
     clienteCpf?: true
@@ -5032,6 +5038,7 @@ export namespace Prisma {
   export type EmprestimoGroupByOutputType = {
     id: number
     dataPedido: Date
+    dataDevolucao: Date
     createdAt: Date
     updatedAt: Date
     clienteCpf: string
@@ -5062,6 +5069,7 @@ export namespace Prisma {
   export type EmprestimoSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     dataPedido?: boolean
+    dataDevolucao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     clienteCpf?: boolean
@@ -5076,6 +5084,7 @@ export namespace Prisma {
   export type EmprestimoSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     dataPedido?: boolean
+    dataDevolucao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     clienteCpf?: boolean
@@ -5090,6 +5099,7 @@ export namespace Prisma {
   export type EmprestimoSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     dataPedido?: boolean
+    dataDevolucao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     clienteCpf?: boolean
@@ -5104,6 +5114,7 @@ export namespace Prisma {
   export type EmprestimoSelectScalar = {
     id?: boolean
     dataPedido?: boolean
+    dataDevolucao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     clienteCpf?: boolean
@@ -5112,7 +5123,7 @@ export namespace Prisma {
     codEmprestimo?: boolean
   }
 
-  export type EmprestimoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "dataPedido" | "createdAt" | "updatedAt" | "clienteCpf" | "bibliotecarioId" | "livrosId" | "codEmprestimo", ExtArgs["result"]["emprestimo"]>
+  export type EmprestimoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "dataPedido" | "dataDevolucao" | "createdAt" | "updatedAt" | "clienteCpf" | "bibliotecarioId" | "livrosId" | "codEmprestimo", ExtArgs["result"]["emprestimo"]>
   export type EmprestimoInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
@@ -5139,6 +5150,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       dataPedido: Date
+      dataDevolucao: Date
       createdAt: Date
       updatedAt: Date
       clienteCpf: string
@@ -5573,6 +5585,7 @@ export namespace Prisma {
   interface EmprestimoFieldRefs {
     readonly id: FieldRef<"Emprestimo", 'Int'>
     readonly dataPedido: FieldRef<"Emprestimo", 'DateTime'>
+    readonly dataDevolucao: FieldRef<"Emprestimo", 'DateTime'>
     readonly createdAt: FieldRef<"Emprestimo", 'DateTime'>
     readonly updatedAt: FieldRef<"Emprestimo", 'DateTime'>
     readonly clienteCpf: FieldRef<"Emprestimo", 'String'>
@@ -6022,6 +6035,7 @@ export namespace Prisma {
   export type ReservaMinAggregateOutputType = {
     id: number | null
     dataPedido: Date | null
+    dataDevolucao: Date | null
     createdAt: Date | null
     updatedAt: Date | null
     clienteCpf: string | null
@@ -6033,6 +6047,7 @@ export namespace Prisma {
   export type ReservaMaxAggregateOutputType = {
     id: number | null
     dataPedido: Date | null
+    dataDevolucao: Date | null
     createdAt: Date | null
     updatedAt: Date | null
     clienteCpf: string | null
@@ -6044,6 +6059,7 @@ export namespace Prisma {
   export type ReservaCountAggregateOutputType = {
     id: number
     dataPedido: number
+    dataDevolucao: number
     createdAt: number
     updatedAt: number
     clienteCpf: number
@@ -6071,6 +6087,7 @@ export namespace Prisma {
   export type ReservaMinAggregateInputType = {
     id?: true
     dataPedido?: true
+    dataDevolucao?: true
     createdAt?: true
     updatedAt?: true
     clienteCpf?: true
@@ -6082,6 +6099,7 @@ export namespace Prisma {
   export type ReservaMaxAggregateInputType = {
     id?: true
     dataPedido?: true
+    dataDevolucao?: true
     createdAt?: true
     updatedAt?: true
     clienteCpf?: true
@@ -6093,6 +6111,7 @@ export namespace Prisma {
   export type ReservaCountAggregateInputType = {
     id?: true
     dataPedido?: true
+    dataDevolucao?: true
     createdAt?: true
     updatedAt?: true
     clienteCpf?: true
@@ -6191,6 +6210,7 @@ export namespace Prisma {
   export type ReservaGroupByOutputType = {
     id: number
     dataPedido: Date
+    dataDevolucao: Date
     createdAt: Date
     updatedAt: Date
     clienteCpf: string
@@ -6221,6 +6241,7 @@ export namespace Prisma {
   export type ReservaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     dataPedido?: boolean
+    dataDevolucao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     clienteCpf?: boolean
@@ -6235,6 +6256,7 @@ export namespace Prisma {
   export type ReservaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     dataPedido?: boolean
+    dataDevolucao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     clienteCpf?: boolean
@@ -6249,6 +6271,7 @@ export namespace Prisma {
   export type ReservaSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     dataPedido?: boolean
+    dataDevolucao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     clienteCpf?: boolean
@@ -6263,6 +6286,7 @@ export namespace Prisma {
   export type ReservaSelectScalar = {
     id?: boolean
     dataPedido?: boolean
+    dataDevolucao?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     clienteCpf?: boolean
@@ -6271,7 +6295,7 @@ export namespace Prisma {
     codReserva?: boolean
   }
 
-  export type ReservaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "dataPedido" | "createdAt" | "updatedAt" | "clienteCpf" | "bibliotecarioId" | "livrosId" | "codReserva", ExtArgs["result"]["reserva"]>
+  export type ReservaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "dataPedido" | "dataDevolucao" | "createdAt" | "updatedAt" | "clienteCpf" | "bibliotecarioId" | "livrosId" | "codReserva", ExtArgs["result"]["reserva"]>
   export type ReservaInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     livro?: boolean | LivroDefaultArgs<ExtArgs>
     cliente?: boolean | ClienteDefaultArgs<ExtArgs>
@@ -6298,6 +6322,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       dataPedido: Date
+      dataDevolucao: Date
       createdAt: Date
       updatedAt: Date
       clienteCpf: string
@@ -6732,6 +6757,7 @@ export namespace Prisma {
   interface ReservaFieldRefs {
     readonly id: FieldRef<"Reserva", 'Int'>
     readonly dataPedido: FieldRef<"Reserva", 'DateTime'>
+    readonly dataDevolucao: FieldRef<"Reserva", 'DateTime'>
     readonly createdAt: FieldRef<"Reserva", 'DateTime'>
     readonly updatedAt: FieldRef<"Reserva", 'DateTime'>
     readonly clienteCpf: FieldRef<"Reserva", 'String'>
@@ -7209,6 +7235,7 @@ export namespace Prisma {
   export const EmprestimoScalarFieldEnum: {
     id: 'id',
     dataPedido: 'dataPedido',
+    dataDevolucao: 'dataDevolucao',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
     clienteCpf: 'clienteCpf',
@@ -7223,6 +7250,7 @@ export namespace Prisma {
   export const ReservaScalarFieldEnum: {
     id: 'id',
     dataPedido: 'dataPedido',
+    dataDevolucao: 'dataDevolucao',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
     clienteCpf: 'clienteCpf',
@@ -7542,6 +7570,7 @@ export namespace Prisma {
     NOT?: EmprestimoWhereInput | EmprestimoWhereInput[]
     id?: IntFilter<"Emprestimo"> | number
     dataPedido?: DateTimeFilter<"Emprestimo"> | Date | string
+    dataDevolucao?: DateTimeFilter<"Emprestimo"> | Date | string
     createdAt?: DateTimeFilter<"Emprestimo"> | Date | string
     updatedAt?: DateTimeFilter<"Emprestimo"> | Date | string
     clienteCpf?: StringFilter<"Emprestimo"> | string
@@ -7556,6 +7585,7 @@ export namespace Prisma {
   export type EmprestimoOrderByWithRelationInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -7573,6 +7603,7 @@ export namespace Prisma {
     OR?: EmprestimoWhereInput[]
     NOT?: EmprestimoWhereInput | EmprestimoWhereInput[]
     dataPedido?: DateTimeFilter<"Emprestimo"> | Date | string
+    dataDevolucao?: DateTimeFilter<"Emprestimo"> | Date | string
     createdAt?: DateTimeFilter<"Emprestimo"> | Date | string
     updatedAt?: DateTimeFilter<"Emprestimo"> | Date | string
     clienteCpf?: StringFilter<"Emprestimo"> | string
@@ -7587,6 +7618,7 @@ export namespace Prisma {
   export type EmprestimoOrderByWithAggregationInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -7606,6 +7638,7 @@ export namespace Prisma {
     NOT?: EmprestimoScalarWhereWithAggregatesInput | EmprestimoScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Emprestimo"> | number
     dataPedido?: DateTimeWithAggregatesFilter<"Emprestimo"> | Date | string
+    dataDevolucao?: DateTimeWithAggregatesFilter<"Emprestimo"> | Date | string
     createdAt?: DateTimeWithAggregatesFilter<"Emprestimo"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Emprestimo"> | Date | string
     clienteCpf?: StringWithAggregatesFilter<"Emprestimo"> | string
@@ -7620,6 +7653,7 @@ export namespace Prisma {
     NOT?: ReservaWhereInput | ReservaWhereInput[]
     id?: IntFilter<"Reserva"> | number
     dataPedido?: DateTimeFilter<"Reserva"> | Date | string
+    dataDevolucao?: DateTimeFilter<"Reserva"> | Date | string
     createdAt?: DateTimeFilter<"Reserva"> | Date | string
     updatedAt?: DateTimeFilter<"Reserva"> | Date | string
     clienteCpf?: StringFilter<"Reserva"> | string
@@ -7634,6 +7668,7 @@ export namespace Prisma {
   export type ReservaOrderByWithRelationInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -7651,6 +7686,7 @@ export namespace Prisma {
     OR?: ReservaWhereInput[]
     NOT?: ReservaWhereInput | ReservaWhereInput[]
     dataPedido?: DateTimeFilter<"Reserva"> | Date | string
+    dataDevolucao?: DateTimeFilter<"Reserva"> | Date | string
     createdAt?: DateTimeFilter<"Reserva"> | Date | string
     updatedAt?: DateTimeFilter<"Reserva"> | Date | string
     clienteCpf?: StringFilter<"Reserva"> | string
@@ -7665,6 +7701,7 @@ export namespace Prisma {
   export type ReservaOrderByWithAggregationInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -7684,6 +7721,7 @@ export namespace Prisma {
     NOT?: ReservaScalarWhereWithAggregatesInput | ReservaScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Reserva"> | number
     dataPedido?: DateTimeWithAggregatesFilter<"Reserva"> | Date | string
+    dataDevolucao?: DateTimeWithAggregatesFilter<"Reserva"> | Date | string
     createdAt?: DateTimeWithAggregatesFilter<"Reserva"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Reserva"> | Date | string
     clienteCpf?: StringWithAggregatesFilter<"Reserva"> | string
@@ -7926,6 +7964,7 @@ export namespace Prisma {
 
   export type EmprestimoCreateInput = {
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     codEmprestimo: number
@@ -7937,6 +7976,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedCreateInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -7947,6 +7987,7 @@ export namespace Prisma {
 
   export type EmprestimoUpdateInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codEmprestimo?: IntFieldUpdateOperationsInput | number
@@ -7958,6 +7999,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -7969,6 +8011,7 @@ export namespace Prisma {
   export type EmprestimoCreateManyInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -7979,6 +8022,7 @@ export namespace Prisma {
 
   export type EmprestimoUpdateManyMutationInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codEmprestimo?: IntFieldUpdateOperationsInput | number
@@ -7987,6 +8031,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -7997,6 +8042,7 @@ export namespace Prisma {
 
   export type ReservaCreateInput = {
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     codReserva: number
@@ -8008,6 +8054,7 @@ export namespace Prisma {
   export type ReservaUncheckedCreateInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -8018,6 +8065,7 @@ export namespace Prisma {
 
   export type ReservaUpdateInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codReserva?: IntFieldUpdateOperationsInput | number
@@ -8029,6 +8077,7 @@ export namespace Prisma {
   export type ReservaUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -8040,6 +8089,7 @@ export namespace Prisma {
   export type ReservaCreateManyInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -8050,6 +8100,7 @@ export namespace Prisma {
 
   export type ReservaUpdateManyMutationInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codReserva?: IntFieldUpdateOperationsInput | number
@@ -8058,6 +8109,7 @@ export namespace Prisma {
   export type ReservaUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -8321,6 +8373,7 @@ export namespace Prisma {
   export type EmprestimoCountOrderByAggregateInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -8339,6 +8392,7 @@ export namespace Prisma {
   export type EmprestimoMaxOrderByAggregateInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -8350,6 +8404,7 @@ export namespace Prisma {
   export type EmprestimoMinOrderByAggregateInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -8368,6 +8423,7 @@ export namespace Prisma {
   export type ReservaCountOrderByAggregateInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -8386,6 +8442,7 @@ export namespace Prisma {
   export type ReservaMaxOrderByAggregateInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -8397,6 +8454,7 @@ export namespace Prisma {
   export type ReservaMinOrderByAggregateInput = {
     id?: SortOrder
     dataPedido?: SortOrder
+    dataDevolucao?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     clienteCpf?: SortOrder
@@ -8877,6 +8935,7 @@ export namespace Prisma {
 
   export type EmprestimoCreateWithoutClienteInput = {
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     codEmprestimo: number
@@ -8887,6 +8946,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedCreateWithoutClienteInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     bibliotecarioId: number
@@ -8906,6 +8966,7 @@ export namespace Prisma {
 
   export type ReservaCreateWithoutClienteInput = {
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     codReserva: number
@@ -8916,6 +8977,7 @@ export namespace Prisma {
   export type ReservaUncheckedCreateWithoutClienteInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     bibliotecarioId: number
@@ -8955,6 +9017,7 @@ export namespace Prisma {
     NOT?: EmprestimoScalarWhereInput | EmprestimoScalarWhereInput[]
     id?: IntFilter<"Emprestimo"> | number
     dataPedido?: DateTimeFilter<"Emprestimo"> | Date | string
+    dataDevolucao?: DateTimeFilter<"Emprestimo"> | Date | string
     createdAt?: DateTimeFilter<"Emprestimo"> | Date | string
     updatedAt?: DateTimeFilter<"Emprestimo"> | Date | string
     clienteCpf?: StringFilter<"Emprestimo"> | string
@@ -8985,6 +9048,7 @@ export namespace Prisma {
     NOT?: ReservaScalarWhereInput | ReservaScalarWhereInput[]
     id?: IntFilter<"Reserva"> | number
     dataPedido?: DateTimeFilter<"Reserva"> | Date | string
+    dataDevolucao?: DateTimeFilter<"Reserva"> | Date | string
     createdAt?: DateTimeFilter<"Reserva"> | Date | string
     updatedAt?: DateTimeFilter<"Reserva"> | Date | string
     clienteCpf?: StringFilter<"Reserva"> | string
@@ -8995,6 +9059,7 @@ export namespace Prisma {
 
   export type EmprestimoCreateWithoutBibliotecarioInput = {
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     codEmprestimo: number
@@ -9005,6 +9070,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedCreateWithoutBibliotecarioInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -9024,6 +9090,7 @@ export namespace Prisma {
 
   export type ReservaCreateWithoutBibliotecarioInput = {
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     codReserva: number
@@ -9034,6 +9101,7 @@ export namespace Prisma {
   export type ReservaUncheckedCreateWithoutBibliotecarioInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -9085,6 +9153,7 @@ export namespace Prisma {
 
   export type EmprestimoCreateWithoutLivroInput = {
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     codEmprestimo: number
@@ -9095,6 +9164,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedCreateWithoutLivroInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -9114,6 +9184,7 @@ export namespace Prisma {
 
   export type ReservaCreateWithoutLivroInput = {
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     codReserva: number
@@ -9124,6 +9195,7 @@ export namespace Prisma {
   export type ReservaUncheckedCreateWithoutLivroInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -9532,6 +9604,7 @@ export namespace Prisma {
   export type EmprestimoCreateManyClienteInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     bibliotecarioId: number
@@ -9542,6 +9615,7 @@ export namespace Prisma {
   export type ReservaCreateManyClienteInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     bibliotecarioId: number
@@ -9551,6 +9625,7 @@ export namespace Prisma {
 
   export type EmprestimoUpdateWithoutClienteInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codEmprestimo?: IntFieldUpdateOperationsInput | number
@@ -9561,6 +9636,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedUpdateWithoutClienteInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
@@ -9571,6 +9647,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedUpdateManyWithoutClienteInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
@@ -9580,6 +9657,7 @@ export namespace Prisma {
 
   export type ReservaUpdateWithoutClienteInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codReserva?: IntFieldUpdateOperationsInput | number
@@ -9590,6 +9668,7 @@ export namespace Prisma {
   export type ReservaUncheckedUpdateWithoutClienteInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
@@ -9600,6 +9679,7 @@ export namespace Prisma {
   export type ReservaUncheckedUpdateManyWithoutClienteInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bibliotecarioId?: IntFieldUpdateOperationsInput | number
@@ -9610,6 +9690,7 @@ export namespace Prisma {
   export type EmprestimoCreateManyBibliotecarioInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -9620,6 +9701,7 @@ export namespace Prisma {
   export type ReservaCreateManyBibliotecarioInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -9629,6 +9711,7 @@ export namespace Prisma {
 
   export type EmprestimoUpdateWithoutBibliotecarioInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codEmprestimo?: IntFieldUpdateOperationsInput | number
@@ -9639,6 +9722,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedUpdateWithoutBibliotecarioInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -9649,6 +9733,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedUpdateManyWithoutBibliotecarioInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -9658,6 +9743,7 @@ export namespace Prisma {
 
   export type ReservaUpdateWithoutBibliotecarioInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codReserva?: IntFieldUpdateOperationsInput | number
@@ -9668,6 +9754,7 @@ export namespace Prisma {
   export type ReservaUncheckedUpdateWithoutBibliotecarioInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -9678,6 +9765,7 @@ export namespace Prisma {
   export type ReservaUncheckedUpdateManyWithoutBibliotecarioInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -9688,6 +9776,7 @@ export namespace Prisma {
   export type EmprestimoCreateManyLivroInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -9698,6 +9787,7 @@ export namespace Prisma {
   export type ReservaCreateManyLivroInput = {
     id?: number
     dataPedido: Date | string
+    dataDevolucao: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     clienteCpf: string
@@ -9707,6 +9797,7 @@ export namespace Prisma {
 
   export type EmprestimoUpdateWithoutLivroInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codEmprestimo?: IntFieldUpdateOperationsInput | number
@@ -9717,6 +9808,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedUpdateWithoutLivroInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -9727,6 +9819,7 @@ export namespace Prisma {
   export type EmprestimoUncheckedUpdateManyWithoutLivroInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -9736,6 +9829,7 @@ export namespace Prisma {
 
   export type ReservaUpdateWithoutLivroInput = {
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     codReserva?: IntFieldUpdateOperationsInput | number
@@ -9746,6 +9840,7 @@ export namespace Prisma {
   export type ReservaUncheckedUpdateWithoutLivroInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
@@ -9756,6 +9851,7 @@ export namespace Prisma {
   export type ReservaUncheckedUpdateManyWithoutLivroInput = {
     id?: IntFieldUpdateOperationsInput | number
     dataPedido?: DateTimeFieldUpdateOperationsInput | Date | string
+    dataDevolucao?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     clienteCpf?: StringFieldUpdateOperationsInput | string
