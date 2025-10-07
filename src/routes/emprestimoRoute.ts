@@ -89,10 +89,10 @@ router.get("/emprestimo/listar/:cpf", validateParams(cpfParamSchema),obterEmpres
  *                 type: string
  *                 format: date
  *             example:
+ *               clienteCpf: "12345678901"
  *               livroId: 1
  *               clienteId: 1
- *               dataEmprestimo: 2025-10-06
- *               dataDevolucao: 2025-10-13
+ *               codEmprestimo: 102
  *     responses:
  *       201:
  *         description: Empréstimo criado com sucesso

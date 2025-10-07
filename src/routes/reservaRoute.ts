@@ -90,11 +90,10 @@ router.get('/reserva/Listar/:cpf',validateParams(cpfParamSchema) ,listarReservas
  *               codReserva:
  *                 type: integer
  *             example:
- *               clienteCpf: "11111111111"
- *               bibliotecarioId: 1
- *               livrosId: 2
- *               dataPedido: "2025-10-06T10:00:00Z"
- *               codReserva: 1234
+ *               clienteCpf: "12345678901"
+ *               livroId: 1
+ *               clienteId: 1
+ *               codReserva: 102
  *     responses:
  *       201:
  *         description: Reserva criada com sucesso

@@ -56,22 +56,17 @@ export const createLivroSchema = z.object({
 export const updateLivroSchema = createLivroSchema.partial();
 
 
+
 export const createEmprestimoSchema = z.object({
-  dataPedido: z.string().refine((val) => {const date = new Date(val);
-    return date <= new Date();
-  }, "A data do pedido não pode ser futura"),
   clienteCpf: z.string().length(11, "CPF deve ter 11 dígitos"),
   bibliotecarioId: z.number().int().positive("ID inválido"),
   livrosId: z.number().int().positive("ID inválido"),
-  codEmprestimo: z.number().int().positive("Código do empréstimo inválido")
+  codEmprestimo: z.number().int().positive("Código do Emprestimo inválido")
 });
 
 export const updateEmprestimoSchema = createEmprestimoSchema.partial();
 
 export const createReservaSchema = z.object({
-  dataPedido: z.string().refine((val) => {const date = new Date(val);
-    return date <= new Date();
-  }, "A data do pedido não pode ser futura"),
   clienteCpf: z.string().length(11, "CPF deve ter 11 dígitos"),
   bibliotecarioId: z.number().int().positive("ID inválido"),
   livrosId: z.number().int().positive("ID inválido"),
