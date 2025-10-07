@@ -73,9 +73,5 @@ export const deletarEmprestimo = async (req: Request, res: Response) => {
             }
         });
     }
-
-  await prisma.emprestimo.delete({
-    where: { id: Number(id) },
-  });
-  res.status(204).send();
+    return res.status(204).json({message: 'Emprestimo deletado com sucesso'})
 }

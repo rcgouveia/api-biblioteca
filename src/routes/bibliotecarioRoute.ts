@@ -84,7 +84,7 @@ router.get("/bibliotecarios/listar/:id",validateParams(idParamSchema), obterBibl
  *               nome: Nome
  *               email: Email@example.com
  *               senha: senha1
- *               cpf: 12345678901
+ *               cpf: "12345678901"
  *     responses:
  *       201:
  *         description: Bibliotecário criado com sucesso

@@ -7,7 +7,7 @@ import { z } from "zod";
 const router = Router();
 
 const cpfParamSchema = z.object({
-  id: z.string().length(11, "CPF deve ter 11 dígitos")
+  cpf: z.string().length(11, "CPF deve ter 11 dígitos")
 });
 const idParamSchema = z.object({
   id: z

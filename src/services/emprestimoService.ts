@@ -1,3 +1,4 @@
+import { number } from 'zod';
 import { prisma } from '../database/prisma';
 import { Emprestimo } from "../generated/prisma";
 
@@ -50,5 +51,7 @@ export const update = async (id: number, data: EmprestimoUpdateData): Promise<Em
 };
 
 export const remove = async (id: number): Promise<Emprestimo> => {
-  return prisma.emprestimo.delete({ where: { id } });
+  return prisma.emprestimo.delete({
+    where: { id }
+  });
 };

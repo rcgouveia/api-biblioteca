@@ -34,9 +34,10 @@ export const criarReserva = async(req: Request, res:Response)=>{
         const reservas = await reservaService.create(req.body)
         return res.status(201).json(reservas)
     } catch(error:any){
-        if (error.code == 'P2002'){
-             return res.status(409).json({ message: `Campo único já existe: ${error.meta.target}` });
+        if (error.code === 'P2002') {
+            return res.status(409).json({ message: `Campo único já existe: ${error.meta.target}` });
         }
+        return res.status(500).json({ message: 'Erro interno', error: error.message });
     }
 }
 

@@ -86,7 +86,7 @@ router.get("/clientes/listar/:id",validateParams(idParamSchema), obterClientePor
  *               nome: Nome
  *               email: Email@example.com
  *               senha: senha1
- *               cpf: 12345678901
+ *               cpf: "12345678901"
  *     responses:
  *       201:
  *         description: Cliente criado com sucesso
