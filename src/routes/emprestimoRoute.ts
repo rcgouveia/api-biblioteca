@@ -91,6 +91,7 @@ router.get("/emprestimo/listar/:cpf", validateParams(cpfParamSchema),obterEmpres
  *             example:
  *               clienteCpf: "12345678901"
  *               livroId: 1
+ *               bibliotecarioId: 3
  *               clienteId: 1
  *               codEmprestimo: 102
  *     responses:

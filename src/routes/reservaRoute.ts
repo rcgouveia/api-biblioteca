@@ -92,6 +92,7 @@ router.get('/reserva/Listar/:cpf',validateParams(cpfParamSchema) ,listarReservas
  *             example:
  *               clienteCpf: "12345678901"
  *               livroId: 1
+ *               bibliotecarioId: 3
  *               clienteId: 1
  *               codReserva: 102
  *     responses:
